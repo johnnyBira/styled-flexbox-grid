@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid/mixins alignColumns returns the css attribute \`justify-content\` with the provided value 1`] = `
+"
+    justify-content: center;
+  "
+`;
+
+exports[`Grid/mixins columns returns the css attribute \`max-width\` with the provided value 1`] = `
+"
+  max-width: 50%;
+"
+`;
+
+exports[`Grid/mixins direction returns \`normal\` as the default \`flex-direction\` attribute 1`] = `
+"
+    flex-direction: initial;
+  "
+`;
+
+exports[`Grid/mixins direction returns \`normal\` as the default \`flex-direction\` attribute 2`] = `
+"
+    flex-direction: initial;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 1`] = `
+"
+    flex-direction: column;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 2`] = `
+"
+    flex-direction: column-reverse;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 3`] = `
+"
+    flex-direction: row;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 4`] = `
+"
+    flex-direction: row-reverse;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 5`] = `
+"
+    flex-direction: row-reverse;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 6`] = `
+"
+    flex-direction: unset;
+  "
+`;
+
+exports[`Grid/mixins direction returns the css attribute \`flex-direction\` with the provided value 7`] = `
+"
+    flex-direction: initial;
+  "
+`;
+
+exports[`Grid/mixins gutter returns the css attributes \`padding-left\` and \`padding-right\` with the provided value 1`] = `
+"
+    padding-left: 1rem;
+    padding-right: 1rem;
+  "
+`;
+
+exports[`Grid/mixins justify returns \`normal\` as the default \`justify-content\` attribute 1`] = `
+"
+    justify-content: normal;
+  "
+`;
+
+exports[`Grid/mixins justify returns \`normal\` as the default \`justify-content\` attribute 2`] = `
+"
+    justify-content: normal;
+  "
+`;
+
+exports[`Grid/mixins justify returns the css attribute \`justify-content\` with the provided value 1`] = `
+"
+    justify-content: flex-end;
+  "
+`;
+
+exports[`Grid/mixins justify returns the css attribute \`justify-content\` with the provided value 2`] = `
+"
+    justify-content: flex-start;
+  "
+`;
+
+exports[`Grid/mixins justify returns the css attribute \`justify-content\` with the provided value 3`] = `
+"
+    justify-content: center;
+  "
+`;
+
+exports[`Grid/mixins justify returns the css attribute \`justify-content\` with the provided value 4`] = `
+"
+    justify-content: space-around;
+  "
+`;
+
+exports[`Grid/mixins justify returns the css attribute \`justify-content\` with the provided value 5`] = `
+"
+    justify-content: space-between;
+  "
+`;
+
+exports[`Grid/mixins justify returns the css attribute \`justify-content\` with the provided value 6`] = `
+"
+    justify-content: space-evenly;
+  "
+`;
+
+exports[`Grid/mixins offset returns the css attribute \`margin-left\` with the provided value 1`] = `
+"
+  margin-left: 50%;
+"
+`;
+
+exports[`Grid/mixins order returns the css attribute \`order\` with the provided value 1`] = `
+"
+    order: 1;
+  "
+`;
+
+exports[`Grid/mixins verticalAlignColumns returns the css attribute \`align-items\` with the provided value 1`] = `"align-items: center"`;
+
+exports[`Grid/mixins verticalAlignSelf returns the css attribute \`align-self\` with the provided value 1`] = `"align-self: center;"`;

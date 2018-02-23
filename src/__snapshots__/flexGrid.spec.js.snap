@@ -1,0 +1,825 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexGrid Column render renders as expected without any props 1`] = `
+.c0 {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+<Column>
+  <Column
+    fixed={false}
+    gridConfig={
+      Object {
+        "breakpoints": Object {
+          "down": [Function],
+          "l": [Function],
+          "list": Array [
+            "xxs",
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl",
+          ],
+          "m": [Function],
+          "only": [Function],
+          "s": [Function],
+          "up": [Function],
+          "xl": [Function],
+          "xs": [Function],
+          "xxs": [Function],
+        },
+        "gutter": Object {
+          "xxs": 2,
+        },
+        "rowWidth": 1200,
+        "utils": Object {
+          "getColumnWidth": [Function],
+          "getGutterWidth": [Function],
+        },
+      }
+    }
+    hidden={false}
+  >
+    <withResponsiveProps
+      gutter={
+        Object {
+          "xxs": 2,
+        }
+      }
+      hidden={false}
+      noGutter={undefined}
+      offset={undefined}
+      order={undefined}
+      position={undefined}
+      responsiveProps={undefined}
+      span={undefined}
+      verticalAlign={undefined}
+    >
+      <styled.div
+        gutter={
+          Object {
+            "xxs": 2,
+          }
+        }
+        hidden={false}
+        noGutter={undefined}
+        offset={undefined}
+        order={undefined}
+        position={undefined}
+        responsiveProps={
+          Array [
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 0px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+            ",
+              [Function],
+              "
+          ",
+            ],
+          ]
+        }
+        span={undefined}
+        verticalAlign={undefined}
+      >
+        <div
+          className="c0"
+          hidden={false}
+          offset={undefined}
+          order={undefined}
+          span={undefined}
+        />
+      </styled.div>
+    </withResponsiveProps>
+  </Column>
+</Column>
+`;
+
+exports[`FlexGrid Column render throws an error when trying to render without a parent Grid component 1`] = `"Column needs to be wrapped inside a Grid component"`;
+
+exports[`FlexGrid Column responsive props creates styles for each column width 1`] = `
+.c0 {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+<Column
+  columns={
+    Object {
+      "l": 4,
+      "m": 6,
+      "s": 8,
+      "xl": 2,
+      "xs": 10,
+      "xxs": 12,
+    }
+  }
+>
+  <Column
+    columns={
+      Object {
+        "l": 4,
+        "m": 6,
+        "s": 8,
+        "xl": 2,
+        "xs": 10,
+        "xxs": 12,
+      }
+    }
+    fixed={false}
+    gridConfig={
+      Object {
+        "breakpoints": Object {
+          "down": [Function],
+          "l": [Function],
+          "list": Array [
+            "xxs",
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl",
+          ],
+          "m": [Function],
+          "only": [Function],
+          "s": [Function],
+          "up": [Function],
+          "xl": [Function],
+          "xs": [Function],
+          "xxs": [Function],
+        },
+        "gutter": Object {
+          "xxs": 2,
+        },
+        "rowWidth": 1200,
+        "utils": Object {
+          "getColumnWidth": [Function],
+          "getGutterWidth": [Function],
+        },
+      }
+    }
+    hidden={false}
+  >
+    <withResponsiveProps
+      gutter={
+        Object {
+          "xxs": 2,
+        }
+      }
+      hidden={false}
+      noGutter={undefined}
+      offset={undefined}
+      order={undefined}
+      position={undefined}
+      responsiveProps={undefined}
+      span={undefined}
+      verticalAlign={undefined}
+    >
+      <styled.div
+        gutter={
+          Object {
+            "xxs": 2,
+          }
+        }
+        hidden={false}
+        noGutter={undefined}
+        offset={undefined}
+        order={undefined}
+        position={undefined}
+        responsiveProps={
+          Array [
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 0px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+            ",
+              [Function],
+              "
+          ",
+            ],
+          ]
+        }
+        span={undefined}
+        verticalAlign={undefined}
+      >
+        <div
+          className="c0"
+          hidden={false}
+          offset={undefined}
+          order={undefined}
+          span={undefined}
+        />
+      </styled.div>
+    </withResponsiveProps>
+  </Column>
+</Column>
+`;
+
+exports[`FlexGrid Column responsive props creates styles for each offset 1`] = `
+.c0 {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    margin-left: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media only screen and (min-width:320px) {
+  .c0 {
+    margin-left: 83.33333333333334%;
+  }
+}
+
+@media only screen and (min-width:576px) {
+  .c0 {
+    margin-left: 66.66666666666666%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0 {
+    margin-left: 33.33333333333333%;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .c0 {
+    margin-left: 16.666666666666664%;
+  }
+}
+
+<Column
+  offset={
+    Object {
+      "l": 4,
+      "m": 6,
+      "s": 8,
+      "xl": 2,
+      "xs": 10,
+      "xxs": 12,
+    }
+  }
+>
+  <Column
+    fixed={false}
+    gridConfig={
+      Object {
+        "breakpoints": Object {
+          "down": [Function],
+          "l": [Function],
+          "list": Array [
+            "xxs",
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl",
+          ],
+          "m": [Function],
+          "only": [Function],
+          "s": [Function],
+          "up": [Function],
+          "xl": [Function],
+          "xs": [Function],
+          "xxs": [Function],
+        },
+        "gutter": Object {
+          "xxs": 2,
+        },
+        "rowWidth": 1200,
+        "utils": Object {
+          "getColumnWidth": [Function],
+          "getGutterWidth": [Function],
+        },
+      }
+    }
+    hidden={false}
+    offset={
+      Object {
+        "l": 4,
+        "m": 6,
+        "s": 8,
+        "xl": 2,
+        "xs": 10,
+        "xxs": 12,
+      }
+    }
+  >
+    <withResponsiveProps
+      gutter={
+        Object {
+          "xxs": 2,
+        }
+      }
+      hidden={false}
+      noGutter={undefined}
+      offset={
+        Object {
+          "l": 4,
+          "m": 6,
+          "s": 8,
+          "xl": 2,
+          "xs": 10,
+          "xxs": 12,
+        }
+      }
+      order={undefined}
+      position={undefined}
+      responsiveProps={undefined}
+      span={undefined}
+      verticalAlign={undefined}
+    >
+      <styled.div
+        gutter={
+          Object {
+            "xxs": 2,
+          }
+        }
+        hidden={false}
+        noGutter={undefined}
+        offset={
+          Object {
+            "l": 4,
+            "m": 6,
+            "s": 8,
+            "xl": 2,
+            "xs": 10,
+            "xxs": 12,
+          }
+        }
+        order={undefined}
+        position={undefined}
+        responsiveProps={
+          Array [
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 0px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 320px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 576px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 768px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 992px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 1200px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+            ",
+              [Function],
+              "
+          ",
+            ],
+          ]
+        }
+        span={undefined}
+        verticalAlign={undefined}
+      >
+        <div
+          className="c0"
+          hidden={false}
+          offset={
+            Object {
+              "l": 4,
+              "m": 6,
+              "s": 8,
+              "xl": 2,
+              "xs": 10,
+              "xxs": 12,
+            }
+          }
+          order={undefined}
+          span={undefined}
+        />
+      </styled.div>
+    </withResponsiveProps>
+  </Column>
+</Column>
+`;
+
+exports[`FlexGrid Column responsive props creates styles for each vertical align 1`] = `
+.c0 {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width:0px) {
+  .c0 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media only screen and (min-width:320px) {
+  .c0 {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+}
+
+@media only screen and (min-width:576px) {
+  .c0 {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0 {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .c0 {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+}
+
+<Column
+  verticalAlign={
+    Object {
+      "l": "bottom",
+      "m": "center",
+      "s": "top",
+      "xl": "top",
+      "xs": "bottom",
+      "xxs": "center",
+    }
+  }
+>
+  <Column
+    fixed={false}
+    gridConfig={
+      Object {
+        "breakpoints": Object {
+          "down": [Function],
+          "l": [Function],
+          "list": Array [
+            "xxs",
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl",
+          ],
+          "m": [Function],
+          "only": [Function],
+          "s": [Function],
+          "up": [Function],
+          "xl": [Function],
+          "xs": [Function],
+          "xxs": [Function],
+        },
+        "gutter": Object {
+          "xxs": 2,
+        },
+        "rowWidth": 1200,
+        "utils": Object {
+          "getColumnWidth": [Function],
+          "getGutterWidth": [Function],
+        },
+      }
+    }
+    hidden={false}
+    verticalAlign={
+      Object {
+        "l": "bottom",
+        "m": "center",
+        "s": "top",
+        "xl": "top",
+        "xs": "bottom",
+        "xxs": "center",
+      }
+    }
+  >
+    <withResponsiveProps
+      gutter={
+        Object {
+          "xxs": 2,
+        }
+      }
+      hidden={false}
+      noGutter={undefined}
+      offset={undefined}
+      order={undefined}
+      position={undefined}
+      responsiveProps={undefined}
+      span={undefined}
+      verticalAlign={
+        Object {
+          "l": "bottom",
+          "m": "center",
+          "s": "top",
+          "xl": "top",
+          "xs": "bottom",
+          "xxs": "center",
+        }
+      }
+    >
+      <styled.div
+        gutter={
+          Object {
+            "xxs": 2,
+          }
+        }
+        hidden={false}
+        noGutter={undefined}
+        offset={undefined}
+        order={undefined}
+        position={undefined}
+        responsiveProps={
+          Array [
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 0px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 320px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 576px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 768px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 992px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+      ",
+              "@media only screen and (min-width: 1200px)",
+              "{
+        ",
+              "
+            ",
+              [Function],
+              "
+          ",
+              "
+      }
+    ",
+            ],
+            Array [
+              "
+            ",
+              [Function],
+              "
+          ",
+            ],
+          ]
+        }
+        span={undefined}
+        verticalAlign={
+          Object {
+            "l": "bottom",
+            "m": "center",
+            "s": "top",
+            "xl": "top",
+            "xs": "bottom",
+            "xxs": "center",
+          }
+        }
+      >
+        <div
+          className="c0"
+          hidden={false}
+          offset={undefined}
+          order={undefined}
+          span={undefined}
+        />
+      </styled.div>
+    </withResponsiveProps>
+  </Column>
+</Column>
+`;

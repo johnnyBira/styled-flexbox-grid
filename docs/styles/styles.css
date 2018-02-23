@@ -1,0 +1,105 @@
+body{
+  background: linear-gradient(20deg,#daa357,rgb(219,112,147));
+}
+
+.markdown-body .hero {
+  min-height: 60vh;
+  widows: 100%;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .25);
+  text-align: center;
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown-body .hero code {
+  background: rgba(0, 0, 0, .3);
+}
+
+.markdown-body .hero p {
+  font-size: 15px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.hero .hello {
+  padding: 2rem 0 3.5rem 0;
+}
+
+.hero h1, .hero h4 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.markdown-body .hero code {
+  background-color: black;
+}
+
+.hero h1 {
+  border: none;
+  margin-bottom: .5rem;
+}
+
+.hero h4 {
+  font-weight: 100;
+}
+
+.hero .logo {
+  border: none;
+  font-size: 7.9rem;
+}
+
+.hero .button-group {
+  text-align: center;
+  display: block;
+  padding: 2rem 0;
+}
+
+
+.hero a.button {
+  border: solid 1px white;
+  padding: 0.5rem 1rem;
+  min-width: 8rem;
+  display: inline-block;
+  border-radius: 2px;
+  margin: 0 0.5rem 1rem;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.25s;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+
+.hero a.button.-wide {
+  min-width: 17rem;
+}
+
+.hero a.button:hover {
+  background: white;
+  color: palevioletred;
+}
+
+.branding-footer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.branding-footer .avatar {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.branding-footer .avatar img {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}

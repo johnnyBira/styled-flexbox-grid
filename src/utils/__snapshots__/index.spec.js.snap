@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid/utils gridFactory custom config returns an object of grid helper methods 1`] = `
+Object {
+  "getColumnWidth": [Function],
+  "getGutterWidth": [Function],
+}
+`;
+
+exports[`Grid/utils gridFactory default config returns an object of grid helper methods 1`] = `
+Object {
+  "getColumnWidth": [Function],
+  "getGutterWidth": [Function],
+}
+`;
