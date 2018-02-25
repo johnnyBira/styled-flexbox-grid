@@ -1,22 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { withDocs }  from 'storybook-readme';
+import { withDocs } from 'storybook-readme';
 import chaptersAddon from 'react-storybook-addon-chapters';
-import { ThemeProvider } from 'styled-components';
-import { number, text, select } from '@storybook/addon-knobs/react';
-import styledBreakpoint from '@humblebee/styled-components-breakpoint';
+import { number, text, select, boolean } from '@storybook/addon-knobs/react';
+import '../../docs/styles/styles.css';
+// import styledBreakpoint from '@humblebee/styled-components-breakpoint';
 
 // Docs
-import '../styles/styles.css';
+// import '../styles/styles.css';
 import MdHeader from '../markdown/storybook/branding/header.md';
 import MdFooter from '../markdown/storybook/branding/footer.md';
 import MdPreface from '../markdown/common/01_preface.md';
 import MdSetup from '../markdown/common/02_setup.md';
-import MyGrid from '../examples/MyGrid';
 import ExampleContent from '../examples/ExampleContent';
-import StyledFlexGrid, { Row, Column } from '../../src';
+import styledFlexboxGrid, { Row, Column } from '../../src';
 
 // Valid props
 import {
@@ -25,13 +24,43 @@ import {
   validAlignProps,
 } from '../../src/row';
 
-const createColumns = (num, span) => {
+const createColumns = (num, span, fixed, auto) => {
   const columns = [];
   for (let i = 0; i < num; i += 1) {
     const index = i + 1;
-    columns.push(<Column span={span} key={index}><ExampleContent height={(index === 1 ? '12rem' : '6rem')}>{index}</ExampleContent></Column>);
+    columns.push(
+      <Column
+        span={span}
+        fixed={fixed}
+        key={index}>
+        <ExampleContent
+          height={(index % 2 ? '12rem' : '6rem')}
+        >
+          {index}
+        </ExampleContent>
+      </Column>
+    );
   }
   return columns;
+};
+
+const bps = {
+  xxs: 0,
+  xs: 320,
+  s: 576,
+  m: 768,
+  l: 992,
+  xl: 1200,
+  xxl: 1400,
+};
+
+const theme = {
+  exampleBackground: 'yellow',
+  styledFlexboxGrid: styledFlexboxGrid({
+    rowWidth: { l: 500, xl: 1200 },
+    columnCount: 12,
+    breakpoints: bps,
+  }),
 };
 
 storiesOf('Styled Flexbox Grid', module)
@@ -50,6 +79,8 @@ storiesOf('Styled Flexbox Grid', module)
       const columnSpan = number('Column: Span', 1, {
         range: true, min: 1, max: 24, step: 1,
       }, 'Column');
+      const columnAuto = boolean('Column: Auto', false);
+      const columnFixed = boolean('Column: Fixed', false);
 
       // Row
       const rowJustify = select('Row: Justify', validJustifyProps, 'initial');
@@ -65,11 +96,19 @@ storiesOf('Styled Flexbox Grid', module)
       }, 'Grid');
 
       return (
-        <MyGrid columnCount={gridColumnCount} rowWidth={rowWidth} direction={rowDirection}>
+        <ThemeProvider theme={{
+            ...theme,
+            styledFlexboxGrid: styledFlexboxGrid({
+              ...theme.styledFlexboxGrid,
+              columnCount: gridColumnCount,
+              rowWidth,
+            }),
+          }}
+        >
           <Row direction={rowDirection} align={rowAlign} justify={rowJustify}>
-            {createColumns(columns, columnSpan)}
+            {createColumns(columns, columnSpan, columnFixed, columnAuto)}
           </Row>
-        </MyGrid>
+        </ThemeProvider>
       );
     },
   ));
@@ -234,7 +273,6 @@ storiesOf('Styled Flexbox Grid', module)
 //       ],
 //     },
 //   );
-
 
 
 // align	other	No	-

@@ -11,7 +11,6 @@ const ExampleContent = styled.div`
   line-height: ${({ height }) => height || defaultHeight};
   font-weight: 600;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .25);
-
   > * {
     display: inline-block;
   }

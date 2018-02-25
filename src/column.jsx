@@ -1,10 +1,10 @@
 import React from 'react';
+import styled, { withTheme } from 'styled-components';
 import { node, bool, number, shape, oneOf, oneOfType, objectOf } from 'prop-types';
 import withResponsiveProps from 'responsive-props'; // eslint-disable-line
-import styled from 'styled-components';
 import * as propTypes from './propTypes';
-import getGridConfig from './HOC/getGridConfig';
-import { ProviderError } from './errors';
+// import getstyledFlexboxGrid from './HOC/getstyledFlexboxGrid';
+
 import {
   order,
   verticalAlignSelf,
@@ -29,16 +29,15 @@ const displayName = 'Column';
 const Column = (props) => {
   const {
     children,
-    gridConfig,
+    theme,
     // Responsice props
     fixed,
+    auto,
   } = props;
 
-  if (!gridConfig) {
-    throw new ProviderError(displayName);
-  }
+  const { styledFlexboxGrid } = theme;
 
-  const { getColumnWidth, getGutterWidth } = gridConfig.utils;
+  const { getColumnWidth, getGutterWidth } = styledFlexboxGrid;
 
   // Register methods to be used for responsive props
   const ColumnResponsiveProps = withResponsiveProps(StyledColumn, {
@@ -48,7 +47,7 @@ const Column = (props) => {
     noGutter,
     verticalAlign: verticalAlignSelf,
     gutter: args => gutterMixin(getGutterWidth(args)),
-    span: args => span(getColumnWidth(args, fixed)),
+    span: args => span(auto ? args : getColumnWidth(args, fixed), auto),
     push: args => push(getColumnWidth(args)),
     pull: args => pull(getColumnWidth(args)),
     background: bg => () => `background: ${bg};`,
@@ -66,8 +65,8 @@ const Column = (props) => {
       hidden={props.hidden}
       position={props.position}
       debug={props.debug}
-      gutter={gridConfig.gutter}
-      breakpoints={gridConfig.breakpoints}
+      gutter={styledFlexboxGrid.gutter}
+      breakpoints={styledFlexboxGrid.breakpoints}
     >
       {children}
     </ColumnResponsiveProps>
@@ -78,6 +77,7 @@ const columnPropTypes = {
   children: node,
   debug: bool,
   fixed: bool,
+  auto: bool,
   // static: bool,
   order: oneOfType([objectOf(number), number]),
   hidden: oneOfType([objectOf(bool), bool]),
@@ -89,7 +89,8 @@ const columnPropTypes = {
 };
 
 Column.propTypes = {
-  gridConfig: shape(propTypes.gridConfig),
+  styledFlexboxGrid: shape(propTypes.styledFlexboxGrid),
+  theme: shape({}),
   ...columnPropTypes,
 };
 
@@ -97,10 +98,11 @@ Column.defaultProps = {
   // fixed: false,
   // hidden: false,
   // debug: false,
-  gridConfig: undefined,
+  // auto: false,
+  styledFlexboxGrid: undefined,
 };
 
-const GridColumn = getGridConfig(Column);
+const GridColumn = withTheme(Column);
 GridColumn.displayName = displayName;
 GridColumn.propTypes = {
   ...columnPropTypes,

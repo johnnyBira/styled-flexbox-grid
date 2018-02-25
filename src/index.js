@@ -1,5 +1,5 @@
-import Grid from './flexGrid';
+import styledFlexboxGrid from './styledFlexboxGrid';
 
 export Column from './column';
 export Row from './row';
-export default Grid;
+export default styledFlexboxGrid;

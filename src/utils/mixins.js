@@ -17,8 +17,14 @@ export const order = index => `
   order: ${index};
 `;
 
-export const span = size => `
-  max-width: ${size};
+export const span = (size = 1, auto = false) => `
+  flex-basis: ${size};
+  ${auto && `
+    max-width: ${size};
+    flex-grow: ${size};
+    max-width: ${size};
+    width: auto;
+  `}
 `;
 
 export const push = pushVal => `
@@ -88,6 +94,10 @@ export const alignValues = {
   end: 'flex-end',
   center: 'center',
 };
+
+export const rowWidth = (val, fullWidth) => (
+  !fullWidth && `max-width: ${val}px;`
+);
 
 export const alignColumns = val => (`
   align-items: ${alignValues[val] || 'normal'};
