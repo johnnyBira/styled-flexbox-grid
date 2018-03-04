@@ -32,7 +32,7 @@ const Column = (props) => {
     theme,
     // Responsice props
     fixed,
-    auto,
+    // auto,
   } = props;
 
   const { styledFlexboxGrid } = theme;
@@ -45,9 +45,8 @@ const Column = (props) => {
     hidden,
     position,
     noGutter,
-    verticalAlign: verticalAlignSelf,
     gutter: args => gutterMixin(getGutterWidth(args)),
-    span: args => span(auto ? args : getColumnWidth(args, fixed), auto),
+    span: args => span(getColumnWidth(args, fixed)),
     push: args => push(getColumnWidth(args)),
     pull: args => pull(getColumnWidth(args)),
     background: bg => () => `background: ${bg};`,
@@ -77,7 +76,7 @@ const columnPropTypes = {
   children: node,
   debug: bool,
   fixed: bool,
-  auto: bool,
+  // auto: bool,
   // static: bool,
   order: oneOfType([objectOf(number), number]),
   hidden: oneOfType([objectOf(bool), bool]),
