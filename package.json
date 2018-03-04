@@ -1,7 +1,7 @@
 {
   "name": "styled-flexbox-grid",
   "version": "0.0.0-development",
-  "description": "Utility functions for creating breakpoints in styled-components.",
+  "description": "Flexbox grid system for styled-components",
   "main": "lib/index.js",
   "scripts": {
     "prebuild": "rimraf lib",
