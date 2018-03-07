@@ -22,9 +22,16 @@ export const span = size => `
   max-width: ${size};
 `;
 
-export const auto = () => `
-  flex-grow: 0;
-  flex-basis: 0;
+export const grow = size => `
+  width: auto;
+  max-width: none !important;
+  flex-grow: ${size};
+`;
+
+export const shrink = size => `
+  width: auto;
+  max-width: none !important;
+  flex-shrink: ${size};
 `;
 
 export const push = pushVal => (`
@@ -49,8 +56,6 @@ export const noGutter = (val = false) => (
   ` :
     null
 );
-
-export const debug = () => '';
 
 export const hidden = val => (
   val ? 'display: none;' : 'display: block;'
@@ -101,6 +106,10 @@ export const rowWidth = (val, fullWidth) => (
 export const alignColumns = val => (`
   align-items: ${alignValues[val] || 'normal'};
   `);
+
+export const debug = () => `
+  background: line-gradient(from left, red 0, red 100%);
+`;
 
 // export const verticalAlignColumns = (val) => {
 //   const alignment = getVerticalAlignment(val);

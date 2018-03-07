@@ -12,6 +12,8 @@ import {
   hidden,
   push,
   pull,
+  grow,
+  shrink,
   gutter as gutterMixin,
   noGutter,
   position,
@@ -45,6 +47,8 @@ const Column = (props) => {
     hidden,
     position,
     noGutter,
+    grow,
+    shrink,
     gutter: args => gutterMixin(getGutterWidth(args)),
     span: args => span(getColumnWidth(args, fixed)),
     push: args => push(getColumnWidth(args)),
@@ -55,6 +59,8 @@ const Column = (props) => {
   return (
     <ColumnResponsiveProps
       order={props.order}
+      grow={props.grow}
+      shrink={props.shrink}
       verticalAlign={props.verticalAlign}
       span={props.span}
       push={props.push}
@@ -76,8 +82,8 @@ const columnPropTypes = {
   children: node,
   debug: bool,
   fixed: bool,
-  // auto: bool,
-  // static: bool,
+  grow: oneOfType([objectOf(number), number]),
+  shrink: oneOfType([objectOf(number), number]),
   order: oneOfType([objectOf(number), number]),
   hidden: oneOfType([objectOf(bool), bool]),
   noGutter: oneOfType([objectOf(bool), bool]),
