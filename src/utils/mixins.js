@@ -34,15 +34,10 @@ export const shrink = size => `
   flex-shrink: ${size};
 `;
 
-export const push = pushVal => (`
+export const offset = offsetVal => (`
   position: relative;
-  margin-left: ${pushVal};
+  margin-left: ${offsetVal};
   `);
-
-export const pull = pullVall => `
-  position: relative;
-  margin-right: -${pullVall};
-  `;
 
 export const gutter = gutterVal => `
   padding-right: ${gutterVal};

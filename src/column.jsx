@@ -10,8 +10,7 @@ import {
   verticalAlignSelf,
   span,
   hidden,
-  push,
-  pull,
+  offset,
   grow,
   shrink,
   gutter as gutterMixin,
@@ -51,8 +50,7 @@ const Column = (props) => {
     shrink,
     gutter: args => gutterMixin(getGutterWidth(args)),
     span: args => span(getColumnWidth(args, fixed)),
-    push: args => push(getColumnWidth(args)),
-    pull: args => pull(getColumnWidth(args)),
+    offset: args => offset(getColumnWidth(args)),
     background: bg => () => `background: ${bg};`,
   });
 
@@ -63,8 +61,7 @@ const Column = (props) => {
       shrink={props.shrink}
       verticalAlign={props.verticalAlign}
       span={props.span}
-      push={props.push}
-      pull={props.pull}
+      offset={props.offset}
       noGutter={props.noGutter}
       responsiveProps={props.responsiveProps}
       hidden={props.hidden}
@@ -89,8 +86,7 @@ const columnPropTypes = {
   noGutter: oneOfType([objectOf(bool), bool]),
   verticalAlign: objectOf(oneOf(['center', 'bottom', 'top'])),
   span: oneOfType([objectOf(number), number]),
-  push: oneOfType([objectOf(number), number]),
-  pull: oneOfType([objectOf(number), number]),
+  offset: oneOfType([objectOf(number), number]),
 };
 
 Column.propTypes = {
