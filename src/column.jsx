@@ -49,7 +49,7 @@ const Column = (props) => {
     grow,
     shrink,
     gutter: args => gutterMixin(getGutterWidth(args)),
-    span: args => span(getColumnWidth(args, fixed)),
+    span: args => span(getColumnWidth(args, fixed), fixed),
     offset: args => offset(getColumnWidth(args)),
     background: bg => () => `background: ${bg};`,
   });

@@ -17,8 +17,8 @@ export const order = index => `
   order: ${index};
 `;
 
-export const span = size => `
-  flex-basis: ${size};
+export const span = (size, fixed) => `
+  flex-basis: ${fixed ? 1 : size};
   max-width: ${size};
 `;
 
