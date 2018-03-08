@@ -6,8 +6,8 @@ import * as propTypes from './propTypes';
 // import getstyledFlexboxGrid from './HOC/getstyledFlexboxGrid';
 
 import {
+  align,
   order,
-  verticalAlignSelf,
   span,
   hidden,
   offset,
@@ -16,6 +16,8 @@ import {
   gutter as gutterMixin,
   noGutter,
   position,
+  // Values,
+  alignSelfValues,
 } from './utils/mixins';
 
 const StyledColumn = styled.div`
@@ -42,6 +44,7 @@ const Column = (props) => {
 
   // Register methods to be used for responsive props
   const ColumnResponsiveProps = withResponsiveProps(StyledColumn, {
+    align,
     order,
     hidden,
     position,
@@ -56,6 +59,7 @@ const Column = (props) => {
 
   return (
     <ColumnResponsiveProps
+      align={props.align}
       order={props.order}
       grow={props.grow}
       shrink={props.shrink}
@@ -75,6 +79,8 @@ const Column = (props) => {
   );
 };
 
+export const validAlignSelfProps = Object.keys(alignSelfValues);
+
 const columnPropTypes = {
   children: node,
   debug: bool,
@@ -84,7 +90,7 @@ const columnPropTypes = {
   order: oneOfType([objectOf(number), number]),
   hidden: oneOfType([objectOf(bool), bool]),
   noGutter: oneOfType([objectOf(bool), bool]),
-  verticalAlign: objectOf(oneOf(['center', 'bottom', 'top'])),
+  align: oneOfType([oneOf(validAlignSelfProps), objectOf(oneOf(validAlignSelfProps))]),
   span: oneOfType([objectOf(number), number]),
   offset: oneOfType([objectOf(number), number]),
 };

@@ -1,17 +1,16 @@
-export const getVerticalAlignment = val => (
-  {
-    center: 'center',
-    bottom: 'flex-end',
-    top: 'flex-start',
-  }[val] || 'normal'
-);
+export const alignSelfValues = {
+  start: 'flex-start',
+  center: 'center',
+  end: 'flex-end',
+  auto: 'auto',
+};
+
+export const getAlignSelf = val => alignSelfValues[val] || 'auto';
 
 // Column mixins
-export const alignSelf = (val) => {
-  const alignment = getVerticalAlignment(val);
-
-  return `align-self: ${alignment};`;
-};
+export const align = val => `
+  align-self: ${getAlignSelf(val)};
+`;
 
 export const order = index => `
   order: ${index};
