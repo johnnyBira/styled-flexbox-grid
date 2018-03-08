@@ -1,11 +1,9 @@
 {
   "extends": [
     "airbnb",
-    "plugin:flowtype/recommended"
   ],
   "plugins": [
     "jest",
-    "flowtype"
   ],
   "settings": {
     "import/extensions": [".js", ".jsx", ".scss"],
@@ -14,9 +12,6 @@
         "config": "webpack.config.js"
       }
     },
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": false
-    }
   },
   "env" : {
     "browser": true,
