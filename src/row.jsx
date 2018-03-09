@@ -1,7 +1,6 @@
 import React from 'react';
-import { withTheme } from 'styled-components';
-import { node, bool, shape, objectOf, oneOf, oneOfType, string } from 'prop-types';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
+import { node, bool, shape, objectOf, oneOf, oneOfType } from 'prop-types';
 import withResponsiveProps from 'responsive-props'; // eslint-disable-line
 import * as propTypes from './propTypes';
 // import getstyledFlexboxGrid from './HOC/getstyledFlexboxGrid';
@@ -20,7 +19,6 @@ import {
 const StyledRow = styled.div`
   box-sizing: content-box;
   width: 100%;
-  ${({ center }) => center && 'margin: 0 auto;'}
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -35,7 +33,9 @@ const Row = (props) => {
     fullWidth,
   } = props;
 
-  const { breakpoints, rowWidth, getGutterWidth } = styledFlexboxGrid;
+  const {
+    breakpoints, rowWidth, getGutterWidth, getColumnWidth,
+  } = styledFlexboxGrid;
 
   const RowhResponsiveProps = withResponsiveProps(StyledRow, {
     align: alignColumns,
@@ -43,7 +43,7 @@ const Row = (props) => {
     sideMargin,
     direction,
     rowWidth: args => rowWidthMixin(args, fullWidth),
-    debug: args => debug(props.debug, getGutterWidth(args), styledFlexboxGrid),
+    debug: args => debug(props.debug, getGutterWidth(args), getColumnWidth),
   });
 
   return (
@@ -51,7 +51,6 @@ const Row = (props) => {
       styledFlexboxGrid={styledFlexboxGrid}
       align={props.align}
       justify={props.justify}
-      fullWidth={props.fullWidth}
       rowWidth={rowWidth}
       center={props.center}
       direction={props.direction}
@@ -69,11 +68,13 @@ export const validAlignProps = Object.keys(alignValues);
 
 const rowPropTypes = {
   children: node,
-  fullWidth: bool,
-  center: bool,
+  fullWidth: oneOfType([objectOf(bool), bool]),
+  center: oneOfType([objectOf(bool), bool]),
   debug: bool,
   // Responsive props
-  styledFlexboxGrid: shape(propTypes.styledFlexboxGrid),
+  theme: shape({
+    styledFlexboxGrid: shape(propTypes.styledFlexboxGrid),
+  }).isRequired,
   align: oneOfType([oneOf(validAlignProps), objectOf(oneOf(validAlignProps))]),
   justify: oneOfType([oneOf(validJustifyProps), objectOf(oneOf(validJustifyProps))]),
   direction: objectOf(oneOf(validDirectionProps)),
@@ -84,7 +85,6 @@ Row.propTypes = rowPropTypes;
 
 Row.defaultProps = {
   children: null,
-  styledFlexboxGrid: {},
   align: undefined,
   justify: undefined,
   direction: undefined,

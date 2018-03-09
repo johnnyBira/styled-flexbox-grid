@@ -104,11 +104,9 @@ export const debug = () => `
   background: line-gradient(from left, red 0, red 100%);
 `;
 
-// export const verticalAlignColumns = (val) => {
-//   const alignment = getVerticalAlignment(val);
-//
-//   return `align-items: ${alignment}`;
-// };
+export const center = val => (`
+  margin: ${val && '0 auto'};
+`);
 
 export const sideMargin = val => (`
   width: calc(100% - ${val});
