@@ -43,7 +43,7 @@ export const gutter = gutterVal => `
   padding-left: ${gutterVal};
   `;
 
-export const noGutter = (val = false) => (
+export const gutterless = (val = false) => (
   val ? `
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -77,7 +77,6 @@ export const directionValues = {
   column: 'column',
   columnReverse: 'column-reverse',
   row: 'row',
-  rowReverse: 'row-reverse',
   reverse: 'row-reverse',
   unset: 'unset',
   initial: 'initial',
