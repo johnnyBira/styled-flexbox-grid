@@ -3,9 +3,18 @@ export const getColumnWidth = (columnCount, rowWidth, size, fixed = false) => (
 );
 
 export const gutterCalc = (gutter) => {
+  // Assume pixel value when type is number
+  if (typeof gutter === 'number') {
+    return `${gutter / 2}px`;
+  }
   const gutterVal = parseFloat(gutter, 10);
   const gutterUnit = gutter.split(gutterVal)[1];
-  return `${gutterVal / 2}${gutterUnit}`;
+  // Return with original unit
+  if (gutterUnit) {
+    return `${gutterVal / 2}${gutterUnit}`;
+  }
+  // If string but missing unit
+  return `${gutterVal / 3}px`;
 };
 
 const defaultConfig = {
