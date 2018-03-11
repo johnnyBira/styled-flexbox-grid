@@ -10,6 +10,7 @@ import {
   alignColumns,
   alignValues,
   sideMargin,
+  center,
   direction,
   directionValues,
   debug,
@@ -42,6 +43,7 @@ const Row = (props) => {
     justify,
     sideMargin,
     direction,
+    center,
     rowWidth: args => rowWidthMixin(args, fullWidth),
     debug: args => debug(props.debug, getGutterWidth(args), getColumnWidth),
   });
