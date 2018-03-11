@@ -47,7 +47,7 @@ const Row = (props) => {
     rowWidth: args => rowWidthMixin(args, fullWidth),
     debug: args => debug(props.debug, getGutterWidth(args), getColumnWidth),
   });
-  console.log(props.theme);
+
   return (
     <RowhResponsiveProps
       styledFlexboxGrid={styledFlexboxGrid}
