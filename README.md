@@ -10,7 +10,7 @@ Using the <a href="https://github.com/johnnyBira/responsive-props">Responsive Pr
 </p>
 
 <p align="center">
-  <a hreaf="https://johnnybira.github.io/styled-flexbox-grid">Read the docs</a>
+  <a href="https://johnnybira.github.io/styled-flexbox-grid">Read the docs</a>
 </p>
 
 ---
