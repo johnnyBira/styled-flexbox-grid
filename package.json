@@ -116,6 +116,8 @@
     "storybook-readme": "^3.2.1",
     "style-loader": "^0.20.2",
     "styled-components": "^3.2.1",
+    "turndown": "^4.0.1",
+    "turndown-plugin-gfm": "^1.0.1",
     "validate-commit-msg": "^2.14.0",
     "webpack": "^3.8.1"
   },
