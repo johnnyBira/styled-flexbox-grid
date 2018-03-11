@@ -7,24 +7,12 @@
 // to "React Create App". This only has babel loader to load JavaScript.
 
 module.exports = {
-  plugins: [
-    // your custom plugins
-  ],
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader' },
-        ],
-      },
-      {
-        test: /\.useable\.css$/,
-        use: [
-          {
-            loader: 'style-loader/useable',
-          },
           { loader: 'css-loader' },
         ],
       },
