@@ -27,8 +27,9 @@
   "keywords": [
     "react",
     "styled-components",
-    "utils",
-    "glamour",
+    "responsive-props",
+    "grid",
+    "layout",
     "styles",
     "css",
     "inline-styles",
