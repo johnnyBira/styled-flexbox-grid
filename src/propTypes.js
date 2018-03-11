@@ -1,16 +1,23 @@
-import { number, string, shape, func } from 'prop-types';
+import { number, string, func, oneOfType, objectOf } from 'prop-types';
 
 export const gridConfig = { // eslint-disable-line
-  rowWidth: number,
-  gutterBase: number,
-  // gutterBase: number.isRequired,
-  gutterUnit: string,
+  rowWidth: oneOfType([objectOf(number), number]),
+  gutter: oneOfType([
+    oneOfType([objectOf(number), number]),
+    oneOfType([objectOf(string), string]),
+  ]),
   columnCount: number,
-  breakpoints: shape({}),
-  utils: shape({
-    getColumnWidth: func,
-    getGutterWidth: func,
-  }),
-  // columnCount: number.isRequired,
-  // breakpoints: shape({}).isRequired,
+  breakpoints: objectOf(number),
+};
+
+export const styledFlexboxGrid = {
+  breakpoints: oneOfType([objectOf(number), number]),
+  rowWidth: oneOfType([objectOf(number), number]),
+  gutter: oneOfType([
+    oneOfType([objectOf(number), number]),
+    oneOfType([objectOf(string), string]),
+  ]),
+  columnCount: number,
+  getColumnWidth: func,
+  getGutterWidth: func,
 };

@@ -47,7 +47,7 @@ const Row = (props) => {
     rowWidth: args => rowWidthMixin(args, fullWidth),
     debug: args => debug(props.debug, getGutterWidth(args), getColumnWidth),
   });
-
+  console.log(props.theme);
   return (
     <RowhResponsiveProps
       styledFlexboxGrid={styledFlexboxGrid}
@@ -79,7 +79,10 @@ const rowPropTypes = {
   }).isRequired,
   align: oneOfType([oneOf(validAlignProps), objectOf(oneOf(validAlignProps))]),
   justify: oneOfType([oneOf(validJustifyProps), objectOf(oneOf(validJustifyProps))]),
-  direction: objectOf(oneOf(validDirectionProps)),
+  direction: oneOfType([
+    objectOf(oneOf(validDirectionProps)),
+    oneOf(validDirectionProps),
+  ]),
 };
 
 
