@@ -14,7 +14,7 @@ import {
   grow,
   shrink,
   gutter as gutterMixin,
-  noGutter,
+  gutterless,
   position,
   // Values,
   alignSelfValues,
@@ -48,7 +48,7 @@ const Column = (props) => {
     order,
     hidden,
     position,
-    noGutter,
+    gutterless,
     grow,
     shrink,
     gutter: args => gutterMixin(getGutterWidth(args)),
@@ -66,7 +66,7 @@ const Column = (props) => {
       verticalAlign={props.verticalAlign}
       span={props.span}
       offset={props.offset}
-      noGutter={props.noGutter}
+      gutterless={props.gutterless}
       responsiveProps={props.responsiveProps}
       hidden={props.hidden}
       position={props.position}
@@ -89,7 +89,7 @@ const columnPropTypes = {
   shrink: oneOfType([objectOf(number), number]),
   order: oneOfType([objectOf(number), number]),
   hidden: oneOfType([objectOf(bool), bool]),
-  noGutter: oneOfType([objectOf(bool), bool]),
+  gutterless: oneOfType([objectOf(bool), bool]),
   align: oneOfType([oneOf(validAlignSelfProps), objectOf(oneOf(validAlignSelfProps))]),
   span: oneOfType([objectOf(number), number]),
   offset: oneOfType([objectOf(number), number]),
