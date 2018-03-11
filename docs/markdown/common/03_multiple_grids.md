@@ -17,13 +17,13 @@ const anotherGrid = styledFlexboxGrid({
 const Example = () => (
   <ThemeProvider theme={theme}>
     <Row>
-      <Column span={6} >
-      <Column span={6} >
+      <Column span={6} />
+      <Column span={6} />
     </Row>
     <ThemeProvider theme={{ styledFlexboxGrid: anotherGrid }}>
       <Row>
-        <Column span={5} >
-        <Column span={5} >
+        <Column span={5} />
+        <Column span={5} />
       </Row>
     </ThemeProvider>
   </ThemeProvider>
@@ -32,3 +32,4 @@ const Example = () => (
 document.getElementById('app'))
 ```
 ---
+<!-- STORY -->
