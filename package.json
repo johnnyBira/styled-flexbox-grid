@@ -10,6 +10,7 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "cz-commit": "git-cz",
     "report-coverage": "codecov",
+    "deploy:gh-pages": "gh-pages -d storybook-static",
     "setup": "npm-run-all setup:*",
     "setup:semantic-release": "semantic-release-cli setup",
     "setup:commitizen": "commitizen init cz-conventional-changelog --save-dev --save-exact",
