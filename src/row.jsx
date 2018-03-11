@@ -37,7 +37,6 @@ const Row = (props) => {
   const {
     breakpoints, rowWidth, getGutterWidth, getColumnWidth,
   } = styledFlexboxGrid;
-  console.log(props.theme);
 
   const RowhResponsiveProps = withResponsiveProps(StyledRow, {
     align: alignColumns,
