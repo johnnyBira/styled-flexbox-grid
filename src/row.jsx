@@ -37,6 +37,7 @@ const Row = (props) => {
   const {
     breakpoints, rowWidth, getGutterWidth, getColumnWidth,
   } = styledFlexboxGrid;
+  console.log(props.theme);
 
   const RowhResponsiveProps = withResponsiveProps(StyledRow, {
     align: alignColumns,
@@ -76,7 +77,7 @@ const rowPropTypes = {
   // Responsive props
   theme: shape({
     styledFlexboxGrid: shape(propTypes.styledFlexboxGrid),
-  }).isRequired,
+  }),
   align: oneOfType([oneOf(validAlignProps), objectOf(oneOf(validAlignProps))]),
   justify: oneOfType([oneOf(validJustifyProps), objectOf(oneOf(validJustifyProps))]),
   direction: oneOfType([
@@ -93,6 +94,7 @@ Row.defaultProps = {
   align: undefined,
   justify: undefined,
   direction: undefined,
+  theme: shape({}),
   fullWidth: false,
   center: true,
   debug: false,

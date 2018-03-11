@@ -97,7 +97,9 @@ const columnPropTypes = {
 
 Column.propTypes = {
   styledFlexboxGrid: shape(propTypes.styledFlexboxGrid),
-  theme: shape({}),
+  theme: shape({
+    styledFlexboxGrid: shape(propTypes.styledFlexboxGrid),
+  }),
   ...columnPropTypes,
 };
 
@@ -106,6 +108,7 @@ Column.defaultProps = {
   // hidden: false,
   // debug: false,
   // auto: false,
+  theme: shape({}),
   styledFlexboxGrid: undefined,
 };
 
