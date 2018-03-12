@@ -43,7 +43,7 @@
     "url": "https://github.com/johnnyBira/styled-flexbox-grid/issues"
   },
   "files": [
-    "dist",
+    "lib",
     "README.md"
   ],
   "jest": {
